@@ -23,6 +23,7 @@ Imports:
     metathis,
     knitr,
     magrittr,
-    dplyr
+    dplyr,
+    rmarkdown
 Remotes: 
     gadenbuie/xaringanExtra
