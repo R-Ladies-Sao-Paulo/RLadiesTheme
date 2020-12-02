@@ -2,7 +2,7 @@ on:
   push:
     branches: [ master ]
   schedule:
-  - cron: "20 12 * * *"
+  - cron: "20 12 * * fri"
 
 name: Render presentation
 
