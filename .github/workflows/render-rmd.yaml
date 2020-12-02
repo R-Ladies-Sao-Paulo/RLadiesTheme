@@ -23,13 +23,11 @@ jobs:
           remotes::install_cran("rmarkdown")
         shell: Rscript {0}
       - name: Render presentation
-        run: Rscript -e 'Sys.setenv(TZ = "America/Sao_Paulo"); rmarkdown::render("docs/index.Rmd"); pagedown::chrome_print("docs/index.Rmd")'
+        run: Rscript -e 'rmarkdown::render("docs/index.Rmd"); pagedown::chrome_print("docs/index.Rmd"); xaringan::summon_remark(to = "inst/rmarkdown/templates/apresenta-o-r-ladies/skeleton/libs/"); fs::file_copy(path = "docs/custom.css", new_path = "inst/rmarkdown/templates/apresenta-o-r-ladies/skeleton/custom.css", overwrite = TRUE); fs::file_copy(path = "docs/index.Rmd", new_path = "inst/rmarkdown/templates/apresenta-o-r-ladies/skeleton/skeleton.Rmd", overwrite = TRUE)'
       - name: Commit results
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
-          git add docs/index.Rmd
-          git add docs/index.html
-          git add docs/index.pdf
+          git add .
           git commit -m 'Re-build docs/index.Rmd' || echo "No changes to commit"
           git push origin || echo "No changes to commit"

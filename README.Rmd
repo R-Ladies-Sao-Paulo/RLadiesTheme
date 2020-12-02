@@ -44,8 +44,8 @@ devtools::install_github("R-Ladies-Sao-Paulo/SlidesRLadies")
 - [ ] Definir um nome que seja consenso entre as pessoas organizadoras
 - [x] Adicionar a apresentação de SP que estava no GitHub da Bea
 - [x] Parametrizar a apresentação para qualquer capítulo usar
-- [ ] Ativar o GitHub Actions para que:
-  - [ ] a apresentação seja atualizada periodicamente
+- [x] Ativar o GitHub Actions para que:
+  - [x] a apresentação seja atualizada periodicamente
   - [x] o pacote seja testado a cada push (checagem contínua)
 - [ ] Testar a instalação do pacote em outros computadores
 - [ ] Criar um template Rmd com a apresentação - para facilitar para outros capítulos

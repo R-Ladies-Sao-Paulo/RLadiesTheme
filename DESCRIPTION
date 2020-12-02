@@ -25,6 +25,7 @@ Imports:
     magrittr,
     dplyr,
     rmarkdown,
-    glue
+    glue,
+    fs
 Remotes: 
     gadenbuie/xaringanExtra
