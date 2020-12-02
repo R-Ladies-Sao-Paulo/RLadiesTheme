@@ -19,38 +19,36 @@ knitr::opts_chunk$set(
 [![R build status](https://github.com/R-Ladies-Sao-Paulo/SlidesRLadies/workflows/R-CMD-check/badge.svg)](https://github.com/R-Ladies-Sao-Paulo/SlidesRLadies/actions)
 <!-- badges: end -->
 
-The goal of SlidesRLadies is to ...
 
-## Installation
+Boas vindas!
+
+Este repositório contém uma breve apresentação sobre a comunidade R-Ladies São Paulo. 
+
+É muito importante proporcionar uma experiência livre de assédio para todas as pessoas participantes.  Por favor, leia o [Código de Conduta da R-Ladies](https://github.com/rladies/starter-kit/wiki/Code-of-Conduct#portuguese).
 
 
-And the development version from [GitHub](https://github.com/) with:
+Caso você faça parte de outro capítulo da R-Ladies, sinta-se à vontade para alterar e utilizar essa apresentação.
+
+
+## Instalação
 
 ``` r
 # install.packages("devtools")
 devtools::install_github("R-Ladies-Sao-Paulo/SlidesRLadies")
-```
-## Example
 
-This is a basic example which shows you how to solve a common problem:
-
-```{r example}
-#library(SlidesRLadies)
-## basic example code
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+## Próximos passos
 
-```{r cars}
-summary(cars)
-```
-
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub!
+- [x] Criar um pacote
+- [ ] Definir um nome que seja consenso entre as pessoas organizadoras
+- [x] Adicionar a apresentação de SP que estava no GitHub da Bea
+- [x] Parametrizar a apresentação para qualquer capítulo usar
+- [ ] Ativar o GitHub Actions para que:
+  - [ ] a apresentação seja atualizada periodicamente
+  - [x] o pacote seja testado a cada push (checagem contínua)
+- [ ] Testar a instalação do pacote em outros computadores
+- [ ] Criar um template Rmd com a apresentação - para facilitar para outros capítulos
+- [ ] Pedir para pessoas de outros capítulos testarem e fazer sugestões
+- [ ] Documentar no README sobre como usar o pacote
+- [ ] Quando estiver pronto, fazer uma live/meetup contando sobre esse processo \o/

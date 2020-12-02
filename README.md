@@ -9,46 +9,39 @@
 status](https://github.com/R-Ladies-Sao-Paulo/SlidesRLadies/workflows/R-CMD-check/badge.svg)](https://github.com/R-Ladies-Sao-Paulo/SlidesRLadies/actions)
 <!-- badges: end -->
 
-The goal of SlidesRLadies is to …
+Boas vindas\!
 
-## Installation
+Este repositório contém uma breve apresentação sobre a comunidade
+R-Ladies São Paulo.
 
-And the development version from [GitHub](https://github.com/) with:
+É muito importante proporcionar uma experiência livre de assédio para
+todas as pessoas participantes. Por favor, leia o [Código de Conduta da
+R-Ladies](https://github.com/rladies/starter-kit/wiki/Code-of-Conduct#portuguese).
+
+Caso você faça parte de outro capítulo da R-Ladies, sinta-se à vontade
+para alterar e utilizar essa apresentação.
+
+## Instalação
 
 ``` r
 # install.packages("devtools")
 devtools::install_github("R-Ladies-Sao-Paulo/SlidesRLadies")
 ```
 
-## Example
+## Próximos passos
 
-This is a basic example which shows you how to solve a common problem:
-
-``` r
-#library(SlidesRLadies)
-## basic example code
-```
-
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
-
-``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
-```
-
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date.
-
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub\!
+  - [x] Criar um pacote
+  - [ ] Definir um nome que seja consenso entre as pessoas organizadoras
+  - [x] Adicionar a apresentação de SP que estava no GitHub da Bea
+  - [x] Parametrizar a apresentação para qualquer capítulo usar
+  - [ ] Ativar o GitHub Actions para que:
+      - [ ] a apresentação seja atualizada periodicamente
+      - [x] o pacote seja testado a cada push (checagem contínua)
+  - [ ] Testar a instalação do pacote em outros computadores
+  - [ ] Criar um template Rmd com a apresentação - para facilitar para
+    outros capítulos
+  - [ ] Pedir para pessoas de outros capítulos testarem e fazer
+    sugestões
+  - [ ] Documentar no README sobre como usar o pacote
+  - [ ] Quando estiver pronto, fazer uma live/meetup contando sobre esse
+    processo /

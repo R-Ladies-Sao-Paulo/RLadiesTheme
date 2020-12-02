@@ -1,13 +1,13 @@
 Package: SlidesRLadies
-Title: What the Package Does (One Line, Title Case)
+Title: Apresentação sobre a comunidade R-Ladies São Paulo com o pacote xaringan
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Beatriz",
            family = "Milz",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+           email = "milz.bea@gmail.com",
+           comment = c(ORCID = "0000-0002-3064-4486"))
+Description: Este pacote contém apresentações sobre a comunidade R-Ladies São Paulo.
 License: CC0
 Encoding: UTF-8
 LazyData: true

@@ -16,6 +16,9 @@ params:
   facebook: RLadiesSaoPaulo
   youtube: RLadiesSãoPaulo
   github: R-Ladies-Sao-Paulo
+  github_repo_apresentacao: R-Ladies-Sao-Paulo/SlidesRLadies
+  url_apresentacao: https://r-ladies-sao-paulo.github.io/SlidesRLadies/
+  url_share_card: https://r-ladies-sao-paulo.github.io/SlidesRLadies/img/share-card.png
 ---
 layout: true
   
@@ -58,24 +61,18 @@ xaringanExtra::use_share_again()
 
 ```{r metathis, echo=FALSE}
 metathis::meta() %>%
-  metathis::meta_name("github-repo" = "beatrizmilz/slidesR") %>% 
+  metathis::meta_name("github-repo" = params$github_repo_apresentacao) %>% 
   metathis::meta_social(
-    title = "R-Ladies São Paulo",
+    title = "R-Ladies `r params$capitulo`",
     description = paste(
-      "Apresentação sobre a R-Ladies São Paulo"
+      "Apresentação sobre a R-Ladies `r params$capitulo`"
     ),
-    url = "https://beatrizmilz.github.io/slidesR/rladies/index.html",
-    image = "https://beatrizmilz.github.io/slidesR/rladies/img/share-card.png",
+    url = params$url_apresentacao,
+    image = params$url_share_card,
     image_alt = paste(
       "Primeiro slide da apresentação sobre",
-      "a R-Ladies São Paulo",
-      "Apresentado por Beatriz Milz"
-    ),
-    og_type = "website",
-    og_author = "Beatriz Milz",
-    twitter_card_type = "summary_large_image",
-    twitter_creator = "@beamilz"
-  )
+      "a R-Ladies `r params$capitulo`"
+    ))
 ```
 
 
