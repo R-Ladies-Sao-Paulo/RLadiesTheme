@@ -48,7 +48,7 @@ devtools::install_github("R-Ladies-Sao-Paulo/SlidesRLadies")
   - [x] a apresentação seja atualizada periodicamente
   - [x] o pacote seja testado a cada push (checagem contínua)
 - [ ] Testar a instalação do pacote em outros computadores
-- [ ] Criar um template Rmd com a apresentação - para facilitar para outros capítulos
+- [x] Criar um template Rmd com a apresentação - para facilitar para outros capítulos
 - [ ] Pedir para pessoas de outros capítulos testarem e fazer sugestões
 - [ ] Documentar no README sobre como usar o pacote
 - [ ] Quando estiver pronto, fazer uma live/meetup contando sobre esse processo \o/

@@ -1,7 +1,7 @@
 ---
 subtitle: "<center><img src= 'https://beatrizmilz.github.io/slidesR/rladies/img/allisonhorst/community1.jpg' width = '40%' alt='Author: Allison Horst'></br><p>Ilustração por <a href='https://twitter.com/allison_horst' target=_blank>@allison_horst</a></p></center>"
 title: "R-Ladies `r params$capitulo`"
-author: "Atualizado em `r format(Sys.time(), format='%d de %B de %Y, %R / UTC%Z')`"
+author: "Atualizado em `r format(Sys.Date(), format='%d de %B de %Y')`"
 output:
   xaringan::moon_reader:
     lib_dir: libs
