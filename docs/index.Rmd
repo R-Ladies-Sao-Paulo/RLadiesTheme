@@ -63,15 +63,15 @@ xaringanExtra::use_share_again()
 metathis::meta() %>%
   metathis::meta_name("github-repo" = params$github_repo_apresentacao) %>% 
   metathis::meta_social(
-    title = "R-Ladies `r params$capitulo`",
-    description = paste(
-      "Apresentação sobre a R-Ladies `r params$capitulo`"
+    title = glue::glue("R-Ladies {params$capitulo}"),
+    description = glue::glue(
+      "Apresentação sobre a R-Ladies {params$capitulo}"
     ),
     url = params$url_apresentacao,
     image = params$url_share_card,
-    image_alt = paste(
-      "Primeiro slide da apresentação sobre",
-      "a R-Ladies `r params$capitulo`"
+    image_alt = glue::glue(
+      "Primeiro slide da apresentação sobre ",
+      "a R-Ladies {params$capitulo}"
     ))
 ```
 

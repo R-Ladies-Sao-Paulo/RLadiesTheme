@@ -24,6 +24,7 @@ Imports:
     knitr,
     magrittr,
     dplyr,
-    rmarkdown
+    rmarkdown,
+    glue
 Remotes: 
     gadenbuie/xaringanExtra
