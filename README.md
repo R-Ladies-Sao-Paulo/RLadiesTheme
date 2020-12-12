@@ -1,12 +1,12 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# SlidesRLadies
+# RLadiesTheme
 
 <!-- badges: start -->
 
 [![R build
-status](https://github.com/R-Ladies-Sao-Paulo/SlidesRLadies/workflows/R-CMD-check/badge.svg)](https://github.com/R-Ladies-Sao-Paulo/SlidesRLadies/actions)
+status](https://github.com/R-Ladies-Sao-Paulo/RLadiesTheme/workflows/R-CMD-check/badge.svg)](https://github.com/R-Ladies-Sao-Paulo/RLadiesTheme/actions)
 <!-- badges: end -->
 
 Boas vindas\!
@@ -25,13 +25,14 @@ para alterar e utilizar essa apresentação.
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("R-Ladies-Sao-Paulo/SlidesRLadies")
+devtools::install_github("R-Ladies-Sao-Paulo/RLadiesTheme")
 ```
 
 ## Próximos passos
 
   - [x] Criar um pacote
-  - [ ] Definir um nome que seja consenso entre as pessoas organizadoras
+  - [x] Definir um nome que seja consenso entre as pessoas: Foi eleito
+    `RLadiesTheme`
   - [x] Adicionar a apresentação de SP que estava no GitHub da Bea
   - [x] Parametrizar a apresentação para qualquer capítulo usar
   - [x] Ativar o GitHub Actions para que:

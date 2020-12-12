@@ -16,9 +16,9 @@ params:
   facebook: RLadiesSaoPaulo
   youtube: RLadiesSãoPaulo
   github: R-Ladies-Sao-Paulo
-  github_repo_apresentacao: R-Ladies-Sao-Paulo/SlidesRLadies
-  url_apresentacao: https://r-ladies-sao-paulo.github.io/SlidesRLadies/
-  url_share_card: https://r-ladies-sao-paulo.github.io/SlidesRLadies/img/share-card.png
+  github_repo_apresentacao: R-Ladies-Sao-Paulo/RLadiesTheme
+  url_apresentacao: https://r-ladies-sao-paulo.github.io/RLadiesTheme/
+  url_share_card: https://r-ladies-sao-paulo.github.io/RLadiesTheme/img/share-card.png
 ---
 layout: true
   
