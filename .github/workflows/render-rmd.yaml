@@ -22,8 +22,12 @@ jobs:
           remotes::install_local(".")
           remotes::install_cran("rmarkdown")
         shell: Rscript {0}
-      - name: Render presentation
-        run: Rscript -e 'rmarkdown::render("docs/index.Rmd"); pagedown::chrome_print("docs/index.Rmd"); xaringan::summon_remark(to = "inst/rmarkdown/templates/apresenta-o-r-ladies/skeleton/libs/"); fs::file_copy(path = "docs/custom.css", new_path = "inst/rmarkdown/templates/apresenta-o-r-ladies/skeleton/custom.css", overwrite = TRUE); fs::file_copy(path = "docs/index.Rmd", new_path = "inst/rmarkdown/templates/apresenta-o-r-ladies/skeleton/skeleton.Rmd", overwrite = TRUE)'
+      - name: Render presentation - Rmd para HTML
+        run: Rscript -e 'rmarkdown::render("docs/index.Rmd"); pagedown::chrome_print("docs/index.Rmd")'
+      - name: Render presentation - HTML para PDF
+        run: Rscript -e 'pagedown::chrome_print("docs/index.Rmd")'
+      - name: Copia arquivos da apresentação para a pasta do template
+        run: Rscript -e 'xaringan::summon_remark(to = "inst/rmarkdown/templates/apresenta-o-r-ladies/skeleton/libs/"); fs::file_copy(path = "docs/custom.css", new_path = "inst/rmarkdown/templates/apresenta-o-r-ladies/skeleton/custom.css", overwrite = TRUE); fs::file_copy(path = "docs/index.Rmd", new_path = "inst/rmarkdown/templates/apresenta-o-r-ladies/skeleton/skeleton.Rmd", overwrite = TRUE)'
       - name: Commit results
         run: |
           git config --local user.email "actions@github.com"
