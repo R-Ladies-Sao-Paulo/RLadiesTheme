@@ -7,6 +7,9 @@
 
 [![R build
 status](https://github.com/R-Ladies-Sao-Paulo/RLadiesTheme/workflows/R-CMD-check/badge.svg)](https://github.com/R-Ladies-Sao-Paulo/RLadiesTheme/actions)
+![Render
+presentation](https://github.com/R-Ladies-Sao-Paulo/RLadiesTheme/workflows/Render%20presentation/badge.svg)
+
 <!-- badges: end -->
 
 Boas vindas\!

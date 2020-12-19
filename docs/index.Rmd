@@ -1,16 +1,16 @@
 ---
-subtitle: "<center><img src= 'https://beatrizmilz.github.io/slidesR/rladies/img/allisonhorst/community1.jpg' width = '40%' alt='Author: Allison Horst'></br><p>Ilustração por <a href='https://twitter.com/allison_horst' target=_blank>@allison_horst</a></p></center>"
 title: "R-Ladies `r params$capitulo`"
-author: "Atualizado em `r format(Sys.Date(), format='%d de %B de %Y')`"
+subtitle: "<center><img src= 'https://beatrizmilz.github.io/slidesR/rladies/img/allisonhorst/community1.jpg' width = '40%' alt='Author: Allison Horst'></br><p>Ilustração por <a href='https://twitter.com/allison_horst' target=_blank>@allison_horst</a></p></center>"
+date: "Atualizado em `r format(Sys.Date(), format='%d de %B de %Y')`"
 output:
   xaringan::moon_reader:
     lib_dir: libs
+    chakra: libs/remark-latest.min.js
     css: [default, metropolis, metropolis-fonts, "custom.css"]
 #knit: pagedown::chrome_print
 # Altere os parâmetros abaixo:
 params:
   capitulo: São Paulo
-  url_foto_capitulo: https://beatrizmilz.github.io/slidesR/rladies/img/1meetupsp.jpeg
   twitter: RLadiesSaoPaulo
   instagram: RLadiesSaoPaulo
   facebook: RLadiesSaoPaulo
@@ -19,6 +19,8 @@ params:
   github_repo_apresentacao: R-Ladies-Sao-Paulo/RLadiesTheme
   url_apresentacao: https://r-ladies-sao-paulo.github.io/RLadiesTheme/
   url_share_card: https://r-ladies-sao-paulo.github.io/RLadiesTheme/img/share-card.png
+  meetup_url: https://www.meetup.com/rladies-sao-paulo/
+  url_foto_capitulo: https://beatrizmilz.github.io/slidesR/rladies/img/1meetupsp.jpeg
 ---
 layout: true
   
@@ -35,20 +37,6 @@ knitr::opts_chunk$set(
 library(magrittr)
 ```
 
-```{r include=FALSE}
-# Base de dados
-url <- "https://benubah.github.io/r-community-explorer/data/rladies.csv"
-
-fs::dir_create("data")
-
-download.file(url, "data/rladies.csv", method = "curl")
-
-rladies <- readr::read_csv("data/rladies.csv") %>% tibble::as_tibble()
-
-
-meetup_url <- rladies %>% dplyr::filter(city == params$capitulo) %>% dplyr::pull(fullurl)
-
-```
 
 
 ```{r xaringanExtra, echo=FALSE}
@@ -77,6 +65,21 @@ metathis::meta() %>%
     ))
 ```
 
+
+```{r include=FALSE}
+# Base de dados
+url <- "https://benubah.github.io/r-community-explorer/data/rladies.csv"
+
+fs::dir_create("data")
+
+download.file(url, "data/rladies.csv", method = "curl")
+
+rladies <- readr::read_csv("data/rladies.csv") %>% tibble::as_tibble()
+
+
+meetup_url <- rladies %>% dplyr::filter(city == params$capitulo) %>% dplyr::pull(fullurl)
+
+```
 
 ---
 class:  
@@ -196,6 +199,39 @@ primeiro_meetup <-  rladies %>% dplyr::filter(city == params$capitulo) %>% dplyr
 ```
 
 ---
+class:    
+
+# Eventos futuros e recentes no Brasil
+
+Dados de eventos recentes obtidos no [calendário do R Community Explorer](https://r-community.github.io/event-explorer/rcalendar.html) 
+
+
+```{r echo=FALSE}
+u <- "https://r-community.github.io/event-explorer/data/rugs_events.json"
+
+df <- jsonlite::fromJSON(u)
+
+
+eventos_recentes_brasil <- df %>% 
+  dplyr::filter(stringr::str_detect(title, "Brazil"))
+
+eventos_recentes_brasil %>% 
+   dplyr::arrange(desc(start)) %>%
+  dplyr::slice(1:5) %>% 
+   tidyr::separate(title, sep = ":", into = c("capitulo", "title"), remove = FALSE, extra = "merge") %>%
+   dplyr::mutate(title = stringr::str_remove_all(title, c(", Brazil, Latin America")),
+                 title_link = glue::glue("[{title}]({url})"),
+                 data = lubridate::as_date(start),
+                 data = format(data, "%d/%b/%Y", locale = "pt_BR")) %>%
+   dplyr::select(group, title_link, data) %>%
+   knitr::kable(col.names = c("Capítulo", "Nome do evento", "Data"))
+
+
+
+```
+
+Thanks to [Ben Ubah](https://github.com/benubah) for [this suggestion](https://github.com/rladies/meetupr/issues/79#issuecomment-743910328)!
+---
 class: 
 
 # R-Ladies em `r params$capitulo`
@@ -223,7 +259,7 @@ class:
   - [<i class="fab fa-twitter"></i> Twitter](https://twitter.com/`r params$twitter`)
   - [<i class="fab fa-instagram"></i> Instagram](https://instagram.com/`r params$instagram`)
   - [<i class="fab fa-facebook"></i> Facebook](https://facebook.com/`r params$facebook`)
-  - [<i class="fab fa-meetup"></i> Meetup](`r meetup_url`)
+  - [<i class="fab fa-meetup"></i> Meetup](`r params$meetup_url`)
   - [<i class="fab fa-github"></i> GitHub](https://github.com/`r params$github`)
   - [<i class="fab fa-youtube"></i> Youtube](https://www.youtube.com/c/`r params$youtube`)
 
