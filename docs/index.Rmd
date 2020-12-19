@@ -1,8 +1,9 @@
 ---
-title: "R-Ladies `r params$capitulo`"
+title: "Conheça a comunidade R-Ladies `r params$capitulo`!"
 subtitle: "<center><img src= 'https://beatrizmilz.github.io/slidesR/rladies/img/allisonhorst/community1.jpg' width = '40%' alt='Author: Allison Horst'></br><p>Ilustração por <a href='https://twitter.com/allison_horst' target=_blank>@allison_horst</a></p></center>"
+author: "R-Ladies `r params$capitulo`"
 date: "Atualizado em `r format(Sys.Date(), format='%d de %B de %Y')`"
-output:
+output: 
   xaringan::moon_reader:
     lib_dir: libs
     chakra: libs/remark-latest.min.js
