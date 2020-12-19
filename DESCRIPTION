@@ -37,6 +37,7 @@ Imports:
     jsonlite,
     tidyr,
     stringr,
-    curl
+    curl,
+    lubridate
 Remotes: 
     gadenbuie/xaringanExtra
