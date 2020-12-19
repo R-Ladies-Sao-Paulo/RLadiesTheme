@@ -32,6 +32,11 @@ Imports:
     dplyr,
     rmarkdown,
     glue,
-    fs
+    fs,
+    tibble,
+    jsonlite,
+    tidyr,
+    stringr,
+    curl
 Remotes: 
     gadenbuie/xaringanExtra
