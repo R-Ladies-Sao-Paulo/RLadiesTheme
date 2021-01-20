@@ -41,8 +41,8 @@ library(magrittr)
 
 
 ```{r xaringanExtra, echo=FALSE}
-xaringanExtra::use_logo(image_url = "https://beatrizmilz.github.io/slidesR/introR/img/rainbow-inclusive.png",
-                        link_url = "https://github.com/R-Ladies-Sao-Paulo/RLadies-Brasil")
+# xaringanExtra::use_logo(image_url = "https://beatrizmilz.github.io/slidesR/introR/img/rainbow-inclusive.png",
+#                         link_url = "https://github.com/R-Ladies-Sao-Paulo/RLadies-Brasil")
 
 ```
 
@@ -199,39 +199,6 @@ pessoas_participantes <- rladies %>% dplyr::filter(city == params$capitulo) %>% 
 primeiro_meetup <-  rladies %>% dplyr::filter(city == params$capitulo) %>% dplyr::pull(created) 
 ```
 
----
-class:    
-
-# Eventos futuros e recentes no Brasil
-
-Dados de eventos recentes obtidos no [calendário do R Community Explorer](https://r-community.github.io/event-explorer/rcalendar.html) 
-
-
-```{r echo=FALSE}
-u <- "https://r-community.github.io/event-explorer/data/rugs_events.json"
-
-df <- jsonlite::fromJSON(u)
-
-
-eventos_recentes_brasil <- df %>% 
-  dplyr::filter(stringr::str_detect(title, "Brazil"))
-
-eventos_recentes_brasil %>% 
-   dplyr::arrange(desc(start)) %>%
-  dplyr::slice(1:5) %>% 
-   tidyr::separate(title, sep = ":", into = c("capitulo", "title"), remove = FALSE, extra = "merge") %>%
-   dplyr::mutate(title = stringr::str_remove_all(title, c(", Brazil, Latin America")),
-                 title_link = glue::glue("[{title}]({url})"),
-                 data = lubridate::as_date(start),
-                 data = format(data, "%d/%b/%Y", locale = "pt_BR")) %>%
-   dplyr::select(group, title_link, data) %>%
-   knitr::kable(col.names = c("Capítulo", "Nome do evento", "Data"))
-
-
-
-```
-
-Thanks to [Ben Ubah](https://github.com/benubah) for [this suggestion](https://github.com/rladies/meetupr/issues/79#issuecomment-743910328)!
 ---
 class: 
 
