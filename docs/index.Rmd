@@ -27,6 +27,7 @@ layout: true
   
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
+Sys.setlocale("LC_ALL","pt_BR")
 
 knitr::opts_chunk$set(
   echo = FALSE,
