@@ -23,7 +23,7 @@ jobs:
           remotes::install_cran("rmarkdown")
         shell: Rscript {0}
       - name: Render presentation - Rmd para HTML
-        run: Rscript -e 'rmarkdown::render("docs/index.Rmd"); pagedown::chrome_print("docs/index.Rmd")'
+        run: Rscript -e 'Sys.setlocale("LC_ALL","pt_BR"); rmarkdown::render("docs/index.Rmd"); pagedown::chrome_print("docs/index.Rmd")'
       - name: Render presentation - HTML para PDF
         run: Rscript -e 'pagedown::chrome_print("docs/index.Rmd")'
       - name: Copia arquivos da apresentação para a pasta do template

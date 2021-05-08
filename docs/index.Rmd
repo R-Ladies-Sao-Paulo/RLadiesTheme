@@ -170,7 +170,7 @@ rladies_br <- rladies %>%
 .pull-left[
 ```{r}
 rladies_br %>%
-  dplyr::slice(1:8) %>%  
+  dplyr::slice(1:9) %>%  
   knitr::kable(col.names = c("Capítulo", "Participantes"))
 
 ```
@@ -180,7 +180,7 @@ rladies_br %>%
 .pull-right[
 ```{r}
 rladies_br %>%
-  dplyr::slice(9:dplyr::n()) %>%
+  dplyr::slice(10:dplyr::n()) %>%
   knitr::kable(col.names = c("Capítulo", "Participantes"))
 
 ```
