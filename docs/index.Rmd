@@ -2,7 +2,7 @@
 title: "Conheça a comunidade R-Ladies `r params$capitulo`!"
 subtitle: "<center><img src= 'https://beatrizmilz.github.io/slidesR/rladies/img/allisonhorst/community1.jpg' width = '40%' alt='Author: Allison Horst'></br><p>Ilustração por <a href='https://twitter.com/allison_horst' target=_blank>@allison_horst</a></p></center>"
 author: "R-Ladies `r params$capitulo`"
-date: "Atualizado em `r format(Sys.Date(), format='%d de %B de %Y')`"
+date: "Atualizado em `r format(Sys.Date(), format='%d/%m/%Y')`"
 output: 
   xaringan::moon_reader:
     lib_dir: libs
@@ -127,7 +127,7 @@ class:
 
 # R-Ladies - Capítulos no mundo
 
-Atualizado em: `r  format(Sys.time(), '%B de %Y')`. Fonte: [R Community Explorer](https://benubah.github.io/r-community-explorer/rladies.html) 
+Atualizado em: `r  format(Sys.time(), '%m/%Y')`. Fonte: [R Community Explorer](https://benubah.github.io/r-community-explorer/rladies.html) 
 
 ```{r echo=FALSE}
 rladies %>%  
@@ -146,7 +146,7 @@ class:
 
 
 
-Atualizado em: `r  format(Sys.time(), '%B de %Y')`. Fonte: [R Community Explorer](https://benubah.github.io/r-community-explorer/rladies.html) 
+Atualizado em: `r  format(Sys.time(), '%m/%Y')`. Fonte: [R Community Explorer](https://benubah.github.io/r-community-explorer/rladies.html) 
 
 ```{r echo=FALSE}
 rladies_br <- rladies %>%
@@ -201,7 +201,7 @@ knitr::include_graphics(params$url_foto_capitulo)
 
 - **Primeiro encontro da R-Ladies `r params$capitulo` ** - `r format(primeiro_meetup, format='%Y')`
 
-- **+ `r pessoas_participantes` pessoas participantes** - `r format(Sys.Date(), format='%B de %Y')`
+- **+ `r pessoas_participantes` pessoas participantes** - `r format(Sys.Date(), format='%m/%Y')`
 
 ---
 
