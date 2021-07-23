@@ -2,7 +2,7 @@
 title: "Conheça a comunidade R-Ladies `r params$capitulo`!"
 subtitle: "<center><img src= 'https://beatrizmilz.github.io/slidesR/rladies/img/allisonhorst/community1.jpg' width = '40%' alt='Author: Allison Horst'></br><p>Ilustração por <a href='https://twitter.com/allison_horst' target=_blank>@allison_horst</a></p></center>"
 author: "R-Ladies `r params$capitulo`"
-date: "Atualizado em `r format(Sys.Date(), format='%d de %B de %Y')`"
+date: "Atualizado em `r format(Sys.Date(), format='%d/%m/%Y')`"
 output: 
   xaringan::moon_reader:
     lib_dir: libs
@@ -127,7 +127,7 @@ class:
 
 # R-Ladies - Capítulos no mundo
 
-Atualizado em: `r  format(Sys.time(), '%B de %Y')`. Fonte: [R Community Explorer](https://benubah.github.io/r-community-explorer/rladies.html) 
+Atualizado em: `r  format(Sys.time(), '%m/%Y')`. Fonte: [R Community Explorer](https://benubah.github.io/r-community-explorer/rladies.html) 
 
 ```{r echo=FALSE}
 rladies %>%  
@@ -146,7 +146,7 @@ class:
 
 
 
-Atualizado em: `r  format(Sys.time(), '%B de %Y')`. Fonte: [R Community Explorer](https://benubah.github.io/r-community-explorer/rladies.html) 
+Atualizado em: `r  format(Sys.time(), '%m/%Y')`. Fonte: [R Community Explorer](https://benubah.github.io/r-community-explorer/rladies.html) 
 
 ```{r echo=FALSE}
 rladies_br <- rladies %>%
@@ -201,17 +201,33 @@ knitr::include_graphics(params$url_foto_capitulo)
 
 - **Primeiro encontro da R-Ladies `r params$capitulo` ** - `r format(primeiro_meetup, format='%Y')`
 
-- **+ `r pessoas_participantes` pessoas participantes** - `r format(Sys.Date(), format='%B de %Y')`
+- **+ `r pessoas_participantes` pessoas participantes** - `r format(Sys.Date(), format='%m/%Y')`
 
 ---
 
 # Conheça também a AI Inclusive
 
+.pull-left[
 <a href='https://www.ai-inclusive.org/'>
-```{r, out.width="50%", fig.cap="<a href='https://www.ai-inclusive.org/'>https://www.ai-inclusive.org/</a>"}
+```{r, out.width="100%", fig.cap="<a href='https://www.ai-inclusive.org/'>https://www.ai-inclusive.org/</a>"}
 knitr::include_graphics("img/ai-inclusive.png")
 ```
 </a>
+]
+
+.pull-right[
+
+- A AI Inclusive é uma organização global com o objetivo de promover a diversidade na comunidade de IA - Inteligência Artificial.
+
+- Siga nas redes sociais!
+  - [<i class="fab fa-twitter"></i> Twitter](https://twitter.com/AIinclusive)
+  - [<i class="fab fa-instagram"></i> Instagram](https://www.instagram.com/ai_inclusive/)
+  - [<i class="fab fa-facebook"></i> Facebook](https://www.facebook.com/aiinclusive)
+  - [<i class="fab fa-linkedin"></i> Linkedin](https://www.linkedin.com/company/ai-inclusive/)  
+  - [<i class="fab fa-youtube"></i> Youtube](https://www.youtube.com/channel/UCrbtq679Z-eOcAb-CTsggjA/featured)
+  - [<i class="fas fa-link"></i> Linktree](https://linktr.ee/ai_inclusive) 
+
+]
 
 ---
 class:
