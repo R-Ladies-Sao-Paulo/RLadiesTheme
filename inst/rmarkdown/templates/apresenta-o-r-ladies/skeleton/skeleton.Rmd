@@ -153,18 +153,7 @@ rladies_br <- rladies %>%
   dplyr::arrange(desc(members)) %>%
   dplyr::filter(country == "Brazil") %>%
   dplyr::mutate(name = paste0("<a href='", fullurl, "' target='_blank'>", name, "</a>")) %>%
-  dplyr::select(
-    -X1,
-    -city,
-    -region,
-    -fullurl,
-    -country,
-    -created,
-    -upcoming_events,
-    -last_event,
-    -past_events,
-    -status
-  )
+  dplyr::select(name, members)
 
 ```
 
@@ -214,6 +203,15 @@ knitr::include_graphics(params$url_foto_capitulo)
 
 - **+ `r pessoas_participantes` pessoas participantes** - `r format(Sys.Date(), format='%B de %Y')`
 
+---
+
+# Conheça também a AI Inclusive
+
+<a href='https://www.ai-inclusive.org/'>
+```{r, out.width="50%", fig.cap="<a href='https://www.ai-inclusive.org/'>https://www.ai-inclusive.org/</a>"}
+knitr::include_graphics("img/ai-inclusive.png")
+```
+</a>
 
 ---
 class:
