@@ -38,6 +38,7 @@ Imports:
     tidyr,
     stringr,
     curl,
-    lubridate
+    lubridate,
+    vroom
 Remotes: 
     gadenbuie/xaringanExtra
