@@ -3,31 +3,31 @@ on:
     branches: [ master ]
   schedule:
   - cron: "20 12 * * fri"
+  workflow_dispatch:
+    branches: [main, master]
 
-name: Render presentation
+name: Render-presentation
 
 jobs:
-  render:
-    name: Render presentation
-    runs-on: macOS-latest
+  render-rmarkdown:
+    runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - uses: actions/checkout@v2
-      - uses: r-lib/actions/setup-r@v1
-      - uses: r-lib/actions/setup-pandoc@v1
-      - name: Install rmarkdown, remotes, and the local package
+      - name: Checkout repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - uses: r-lib/actions/setup-pandoc@v2
+
+      - uses: r-lib/actions/setup-r@v2
+
+      - uses: r-lib/actions/setup-renv@v2
+
+      - name: Execute Script
         run: |
-          install.packages("remotes")
-          remotes::install_local(".")
-          remotes::install_cran("rmarkdown")
-        shell: Rscript {0}
-      - name: Render presentation - Rmd para HTML
-        run: Rscript -e 'Sys.setlocale("LC_ALL","pt_BR"); rmarkdown::render("docs/index.Rmd"); pagedown::chrome_print("docs/index.Rmd")'
-      - name: Render presentation - HTML para PDF
-        run: Rscript -e 'pagedown::chrome_print("docs/index.Rmd")'
-      - name: Copia arquivos da apresentação para a pasta do template
-        run: Rscript -e 'xaringan::summon_remark(to = "inst/rmarkdown/templates/apresenta-o-r-ladies/skeleton/libs/"); fs::file_copy(path = "docs/custom.css", new_path = "inst/rmarkdown/templates/apresenta-o-r-ladies/skeleton/custom.css", overwrite = TRUE); fs::file_copy(path = "docs/index.Rmd", new_path = "inst/rmarkdown/templates/apresenta-o-r-ladies/skeleton/skeleton.Rmd", overwrite = TRUE)'
+          Rscript "inst/render-rmd.R"
       - name: Commit results
         run: |
           git config --local user.email "actions@github.com"
