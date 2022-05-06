@@ -32,15 +32,23 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
+.title[
 # Conheça a comunidade R-Ladies São Paulo!
+]
+.subtitle[
 ## <center>
 <img src= 'https://beatrizmilz.github.io/slidesR/rladies/img/allisonhorst/community1.jpg' width = '40%' alt='Author: Allison Horst'></br>
 <p>
 Ilustração por <a href='https://twitter.com/allison_horst' target=_blank><span class="citation">@allison_horst</span></a>
 </p>
 </center>
+]
+.author[
 ### R-Ladies São Paulo
-### Atualizado em 22/04/2022
+]
+.date[
+### Atualizado em 06/05/2022
+]
 
 ---
 
@@ -103,7 +111,7 @@ class:
 
 # R-Ladies - Capítulos no mundo
 
-Atualizado em: 04/2022. Fonte: [R Community Explorer](https://benubah.github.io/r-community-explorer/rladies.html) 
+Atualizado em: 05/2022. Fonte: [R Community Explorer](https://benubah.github.io/r-community-explorer/rladies.html) 
 
 
 |Região            | Número de Capítulos| Total de participantes|
@@ -123,7 +131,7 @@ class:
 
 
 
-Atualizado em: 04/2022. Fonte: [R Community Explorer](https://benubah.github.io/r-community-explorer/rladies.html) 
+Atualizado em: 05/2022. Fonte: [R Community Explorer](https://benubah.github.io/r-community-explorer/rladies.html) 
 
 
 
@@ -175,7 +183,7 @@ class:
 
 - **Primeiro encontro da R-Ladies São Paulo ** - 2018
 
-- **+ 1340 pessoas participantes** - 04/2022
+- **+ 1340 pessoas participantes** - 05/2022
 
 ---
 
@@ -295,6 +303,19 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
 (function() {
   "use strict"
   // Replace <script> tags in slides area to make them executable
